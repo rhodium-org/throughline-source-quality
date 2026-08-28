@@ -1,0 +1,16 @@
+uid: REQ-0005
+type: requirement
+status: proposed
+title: Regeneration preserves hand-authored content
+text: Where a human has curated an item — a hand-written title, an added note — that
+  content survives a re-run of the generator that produced the surrounding graph. A
+  generator that overwrites curation makes the graph unimprovable by hand, so any
+  bulk rewrite of generated content is an explicit operation that states what it will
+  overwrite, not a side effect of ordinary regeneration.
+normative: true
+links:
+- target: INT-0001
+  type: implements
+attrs:
+  priority: must
+  origin: hybrid

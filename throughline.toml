@@ -1,0 +1,65 @@
+[project]
+name = "throughline source construction quality"
+format_version = 3
+
+# A throughline graph that holds the quality bar for *other* throughline sources —
+# the standards and guidance graphs (asvs, wcag, aisvs, nist-ai-rmf, masvs, slsa, …)
+# that re-express a published standard as a composable requirements graph.
+#
+# HOW THIS GRAPH IS APPLIED — read NG-0001 before wiring anything.
+# It is applied *through construction*, never by reference. The sources it governs
+# do NOT declare it as a `[[sources]]` dependency. What satisfies these requirements
+# is the generator that builds a source; what cites them is the commit that changes
+# that generator. A source repo stays a clean, standalone cut of its standard.
+
+[grounding]
+root_types = ["intent", "business_need", "risk", "constraint", "assumption", "non_goal"]
+delivery_roots = ["intent", "business_need", "risk", "constraint"]
+ground_link_types = ["derives_from", "mitigates", "implements", "verifies"]
+ai_origins = ["ai", "hybrid"]
+
+[types.requirement]
+attrs.priority = { type = "enum", values = ["must", "should", "could"], normative = true }
+attrs.origin   = { type = "enum", values = ["human", "ai", "hybrid"] }
+
+[types.non_goal]
+attrs.origin = { type = "enum", values = ["human", "ai", "hybrid"] }
+
+[links]
+types = ["refines", "verifies", "satisfies", "implements", "relates",
+         "derives_from", "mitigates", "assumes"]
+
+[link_rules]
+implements = { from = ["requirement"], to = ["intent"] }
+
+[status]
+values = ["proposed", "draft", "deferred", "approved", "ratified", "implemented",
+          "verified", "suspect", "rejected", "deleted"]
+
+[status.roles]
+initial = "draft"
+proposed = "proposed"
+ratified = "ratified"
+invalidated = "rejected"
+suspect = "suspect"
+tombstone = "deleted"
+
+[transitions]
+proposed    = ["draft", "approved", "ratified", "deferred", "suspect", "rejected", "deleted"]
+draft       = ["proposed", "approved", "deferred", "suspect", "rejected", "deleted"]
+deferred    = ["proposed", "draft", "approved", "suspect", "rejected", "deleted"]
+approved    = ["ratified", "implemented", "deferred", "suspect", "rejected", "deleted"]
+ratified    = ["implemented", "suspect", "rejected", "deleted"]
+implemented = ["verified", "suspect", "rejected", "deleted"]
+verified    = ["implemented", "suspect", "deleted"]
+suspect     = ["approved", "ratified", "implemented", "verified", "rejected", "deleted"]
+rejected    = ["draft", "deleted"]
+
+# NOTE: `tl init` seeds a coverage rule requiring every requirement to be verified
+# by a `test` item. It is deliberately absent here. The verification of these
+# requirements does not live in this graph — it lives in each governed source repo,
+# as the generator that builds it and the CI gate that checks the result. Modelling
+# local `test` items would assert a verification this repo does not perform.
+
+[docs]
+paths = ["docs/*.md", "README.md"]

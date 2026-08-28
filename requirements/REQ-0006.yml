@@ -1,0 +1,15 @@
+uid: REQ-0006
+type: requirement
+status: proposed
+title: A clause the publisher has withdrawn gets no item
+text: Standards bodies commonly retain the numbers of withdrawn clauses as tombstones
+  so that existing citations keep resolving. A tombstone is not a requirement, and
+  rendering one as a live item would invite a consumer to ground work in a clause the
+  publisher has already withdrawn.
+normative: true
+links:
+- target: INT-0001
+  type: implements
+attrs:
+  priority: must
+  origin: hybrid

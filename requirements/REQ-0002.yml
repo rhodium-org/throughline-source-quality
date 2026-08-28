@@ -1,0 +1,15 @@
+uid: REQ-0002
+type: requirement
+status: proposed
+title: A derived title is reproducible from the clause it labels
+text: The derivation from clause text to title is deterministic, so that the same
+  clause always yields the same title. A reviewer can then re-run a generator and see
+  that the titles it would write match the titles on disk, which is what makes an
+  incorrect derivation detectable rather than a matter of taste.
+normative: true
+links:
+- target: INT-0001
+  type: implements
+attrs:
+  priority: must
+  origin: hybrid
