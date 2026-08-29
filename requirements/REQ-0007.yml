@@ -1,11 +1,11 @@
 uid: REQ-0007
 type: requirement
-status: proposed
+status: ratified
 title: The publisher's own clause identifier lives in an attribute, not in the UID
 text: The published identifier of a clause — "V2.1.1", "1.4.3" — is recorded as an
-  attribute of the item. It is not encoded in the UID, because the two are governed by
-  different parties — the publisher renumbers its clauses between editions, while a
-  UID must stay fixed for the consumers citing it.
+  attribute of the item. It is not encoded in the UID, because the two are governed
+  by different parties — the publisher renumbers its clauses between editions, while
+  a UID must stay fixed for the consumers citing it.
 normative: true
 links:
 - target: INT-0001
@@ -13,3 +13,5 @@ links:
 attrs:
   priority: must
   origin: hybrid
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:b7966a787b43757bf68a89c241d14a135f497968b633810c61bb13891b6265ca

@@ -1,15 +1,15 @@
 uid: REQ-0001
 type: requirement
-status: proposed
+status: ratified
 title: A mechanically derived title is a complete statement, never a truncated fragment
 text: Where an item's title is derived from clause text rather than written by hand,
   the derivation yields a grammatically complete statement that identifies the clause.
-  It never emits the fragment left behind by cutting the clause at a punctuation mark.
-  Splitting on the first comma, semicolon or full stop does not satisfy this, because
-  all three occur freely inside a sentence — inside subordinate clauses, inside
-  parenthetical lists, and inside abbreviations such as "e.g." — and the result is a
-  label like "That" or "Data selection or database queries (e" that identifies nothing.
-  Taking the first complete sentence of the clause does satisfy it.
+  It never emits the fragment left behind by cutting the clause at a punctuation
+  mark. Splitting on the first comma, semicolon or full stop does not satisfy this,
+  because all three occur freely inside a sentence — inside subordinate clauses,
+  inside parenthetical lists, and inside abbreviations such as "e.g." — and the result
+  is a label like "That" or "Data selection or database queries (e" that identifies
+  nothing. Taking the first complete sentence of the clause does satisfy it.
 normative: true
 links:
 - target: INT-0001
@@ -17,3 +17,5 @@ links:
 attrs:
   priority: must
   origin: hybrid
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:fb5338e67020939f657460fabc3afaca7149cc34b81ca24079de989a0d8ae2b6

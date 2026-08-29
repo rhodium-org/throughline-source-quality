@@ -1,16 +1,18 @@
 uid: NG-0001
 type: non_goal
-status: proposed
+status: ratified
 title: This graph is not composed by the sources it governs
-text: A governed source does not declare this graph as a `[[sources]]` dependency and
-  does not name its UIDs in item links. tl-compose namespaces are not transitive, so a
-  reference from a source to this graph forces every downstream consumer to declare a
-  namespace it has no interest in or fail — `tl-compose check` exits 2 with "names
-  namespace 'quality', which is not a declared [[sources]] namespace". Sources exist to
-  be composed by other people, and loading them with the toolchain's own housekeeping
-  is a cost every consumer pays forever. These requirements are applied through
-  construction instead — the generator that builds a source satisfies them, and the
-  commit that changes that generator cites them.
+text: A governed source does not declare this graph as a `[[sources]]` dependency
+  and does not name its UIDs in item links. tl-compose namespaces are not transitive,
+  so a reference from a source to this graph forces every downstream consumer to
+  declare a namespace it has no interest in or fail — `tl-compose check` exits 2
+  with "names namespace 'quality', which is not a declared [[sources]] namespace".
+  Sources exist to be composed by other people, and loading them with the toolchain's
+  own housekeeping is a cost every consumer pays forever. These requirements are
+  applied through construction instead — the generator that builds a source satisfies
+  them, and the commit that changes that generator cites them.
 normative: false
 attrs:
   origin: hybrid
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:5d1c723f0a38b2e9a856b63ca897911b681bd24a1580d686c179953a9da63551

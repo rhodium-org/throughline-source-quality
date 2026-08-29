@@ -1,13 +1,12 @@
 uid: REQ-0003
 type: requirement
-status: proposed
+status: ratified
 title: Clause text is reproduced as the publisher wrote it
-text: An item's text carries the clause verbatim. Mechanical normalisation is
-  permitted where it loses no meaning — resolving a hyperlink to its label text,
-  removing the publisher's internal cross-reference markers, collapsing runs of
-  whitespace. Paraphrasing, summarising, correcting or truncating the clause is not,
-  because a consumer grounding its work in a borrowed item is entitled to read what
-  the standard actually says.
+text: An item's text carries the clause verbatim. Mechanical normalisation is permitted
+  where it loses no meaning — resolving a hyperlink to its label text, removing the
+  publisher's internal cross-reference markers, collapsing runs of whitespace. Paraphrasing,
+  summarising, correcting or truncating the clause is not, because a consumer grounding
+  its work in a borrowed item is entitled to read what the standard actually says.
 normative: true
 links:
 - target: INT-0001
@@ -15,3 +14,5 @@ links:
 attrs:
   priority: must
   origin: hybrid
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:0e66315d9fa33cb7139fbcbccbf71f6d173e3d20964520195d6c017c7d9ac026

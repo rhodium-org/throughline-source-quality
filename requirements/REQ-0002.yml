@@ -1,11 +1,11 @@
 uid: REQ-0002
 type: requirement
-status: proposed
+status: ratified
 title: A derived title is reproducible from the clause it labels
 text: The derivation from clause text to title is deterministic, so that the same
-  clause always yields the same title. A reviewer can then re-run a generator and see
-  that the titles it would write match the titles on disk, which is what makes an
-  incorrect derivation detectable rather than a matter of taste.
+  clause always yields the same title. A reviewer can then re-run a generator and
+  see that the titles it would write match the titles on disk, which is what makes
+  an incorrect derivation detectable rather than a matter of taste.
 normative: true
 links:
 - target: INT-0001
@@ -13,3 +13,5 @@ links:
 attrs:
   priority: must
   origin: hybrid
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:7daa6de17de213a2585a32df54c44cb901b12fbad43ad67bde6111e04b52fb8f
