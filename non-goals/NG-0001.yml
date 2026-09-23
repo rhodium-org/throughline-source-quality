@@ -11,6 +11,10 @@ text: A governed source does not declare this graph as a `[[sources]]` dependenc
   own housekeeping is a cost every consumer pays forever. These requirements are
   applied through construction instead — the generator that builds a source satisfies
   them, and the commit that changes that generator cites them.
+rationale: |-
+  The text gives the reason as it stood when this was ratified, under throughline-compose, and that reason no longer holds. Since throughline 3.11, tl composes sources transitively, to any depth. A project that composes a governed source would have this graph bound into its union as 'quality', at the pin the source set, without declaring anything. The reference would resolve and nothing would fail.
+
+  The non-goal stands on the text's other half. A source that composed this graph would carry it into every union the source enters: fetched into each consumer's cache, its requirements listed, checked and rendered beside the standard the consumer asked for, and its label taking a name in the consumer's union. A consumer that already binds 'quality' to a different graph is refused until it sets an alias on the declared source that carries this one. That is still housekeeping every consumer pays for, for requirements that are none of their business, so the linkage still runs through construction.
 normative: false
 attrs:
   origin: hybrid

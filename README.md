@@ -2,8 +2,8 @@
 
 The quality bar for **throughline sources** — the standalone graphs that re-express a
 published standard (ASVS, WCAG, AISVS, NIST AI RMF, MASVS, SLSA, …) so a consuming
-project can compose them with
-[throughline-compose](https://github.com/rhodium-org/throughline-compose).
+project can compose them with `tl` from [throughline](https://pypi.org/project/throughline/)
+3.11.0 or later.
 
 Those sources are built by generators that read a publisher's machine-readable export
 and emit one item per clause. This repository holds the requirements those generators
@@ -22,16 +22,20 @@ It carries
 is [`NG-0001`](docs/spec.md#how-this-graph-is-applied), and it is a hard constraint
 rather than a stylistic preference.
 
-`tl-compose` namespaces are not transitive. If `throughline-asvs` adopted this graph
-and cited `quality:REQ-0001` in an item link, then every project composing
-`throughline-asvs` would have to declare a `quality` namespace of its own or fail:
+Composition is transitive. If `throughline-asvs` adopted this graph and cited
+`quality:REQ-0001` in an item link, then every project composing `throughline-asvs`
+would compose this graph as well, under the label `quality` and at the pin
+`throughline-asvs` set. The consumer declares nothing and is not asked:
 
 ```
-tl-compose: reference 'quality:REQ-0001' names namespace 'quality',
-            which is not a declared [[sources]] namespace
-$ echo $?
-2
+tl check · 2 source(s) composed: asvs (…) […], quality (…) […] via asvs
 ```
+
+From then on this graph is fetched into every consumer's cache, and its requirements
+are listed, checked and rendered beside the standard the consumer actually asked for.
+Its label also takes a name in every consumer's union. A consumer that already binds
+`quality` to a different graph is refused until it sets
+`alias = { quality = "…" }` on its `throughline-asvs` source.
 
 Sources exist to be composed by other people. Loading them with the toolchain's own
 housekeeping is a cost every consumer pays forever, for a requirement that is none of
