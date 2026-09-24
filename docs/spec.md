@@ -12,9 +12,11 @@ It carries
 ## Purpose
 
 <!-- tl:item INT-0001 -->
-**INT-0001 — A published standard is re-expressed as a graph without distortion or loss** — `intent`, status `approved`
+**INT-0001 — A published standard is re-expressed as a graph without distortion or loss** — `intent`, status `ratified`
 
 > A throughline source exists so that a project can ground its own work in a published standard by composing it, rather than by retyping it. That is only worth doing if the rendering is faithful to the standard and legible to a reader who has not opened the original. A source that quietly distorts what it re-expresses is worse than no source at all, because it is trusted and composed at scale.
+
+**ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:f6b897537b50b8f0d098a8cead02ab90c5665069165471e8bae836f88ebad495
 <!-- tl:end -->
 
 ## How this graph is applied
@@ -31,7 +33,7 @@ of its standard, with no dependency on this graph.
 
 *Rationale:* Composing this graph from each governed source was rejected. Composition is transitive, so the reference would resolve, but this graph would then ride into every union the source enters, at a cost paid by consumers who never asked for it.
 
-**origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:5d1c723f0a38b2e9a856b63ca897911b681bd24a1580d686c179953a9da63551
+**origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:1ee2863dd537698c629f08babc8f0257f3bfd212b6c3341d20aab36bcd66c37d
 <!-- tl:end -->
 
 ## Requirements

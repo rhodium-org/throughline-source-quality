@@ -1,10 +1,23 @@
 uid: INT-0001
 type: intent
-status: approved
+status: ratified
 title: A published standard is re-expressed as a graph without distortion or loss
 text: A throughline source exists so that a project can ground its own work in a
   published standard by composing it, rather than by retyping it. That is only worth
-  doing if the rendering is faithful to the standard and legible to a reader who has
-  not opened the original. A source that quietly distorts what it re-expresses is
-  worse than no source at all, because it is trusted and composed at scale.
+  doing if the rendering is faithful to the standard and legible to a reader who
+  has not opened the original. A source that quietly distorts what it re-expresses
+  is worse than no source at all, because it is trusted and composed at scale.
 normative: false
+attrs:
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:f6b897537b50b8f0d098a8cead02ab90c5665069165471e8bae836f88ebad495
+  ratified_content:
+    type: intent
+    text: A throughline source exists so that a project can ground its own work in
+      a published standard by composing it, rather than by retyping it. That is only
+      worth doing if the rendering is faithful to the standard and legible to a reader
+      who has not opened the original. A source that quietly distorts what it re-expresses
+      is worse than no source at all, because it is trusted and composed at scale.
+    normative: false
+    derived: false
+    attrs: {}
