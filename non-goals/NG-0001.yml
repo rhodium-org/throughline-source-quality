@@ -2,21 +2,37 @@ uid: NG-0001
 type: non_goal
 status: ratified
 title: This graph is not composed by the sources it governs
-text: A governed source does not declare this graph as a `[[sources]]` dependency
-  and does not name its UIDs in item links. tl-compose namespaces are not transitive,
-  so a reference from a source to this graph forces every downstream consumer to
-  declare a namespace it has no interest in or fail — `tl-compose check` exits 2
-  with "names namespace 'quality', which is not a declared [[sources]] namespace".
-  Sources exist to be composed by other people, and loading them with the toolchain's
-  own housekeeping is a cost every consumer pays forever. These requirements are
-  applied through construction instead — the generator that builds a source satisfies
-  them, and the commit that changes that generator cites them.
-rationale: |-
-  The text gives the reason as it stood when this was ratified, under throughline-compose, and that reason no longer holds. Since throughline 3.11, tl composes sources transitively, to any depth. A project that composes a governed source would have this graph bound into its union as 'quality', at the pin the source set, without declaring anything. The reference would resolve and nothing would fail.
-
-  The non-goal stands on the text's other half. A source that composed this graph would carry it into every union the source enters: fetched into each consumer's cache, its requirements listed, checked and rendered beside the standard the consumer asked for, and its label taking a name in the consumer's union. A consumer that already binds 'quality' to a different graph is refused until it sets an alias on the declared source that carries this one. That is still housekeeping every consumer pays for, for requirements that are none of their business, so the linkage still runs through construction.
+text: 'A governed source does not declare this graph as a `[[sources]]` dependency
+  and does not name its UIDs in item links. Composition is transitive, so a source
+  that composed this graph would carry it into every consumer''s union: fetched into
+  each consumer''s cache, its items checked and rendered beside the standard the
+  consumer asked for, and its label taking a name in the consumer''s union, which
+  a consumer already using that name must alias apart. Sources exist to be composed
+  by other people, and loading them with the toolchain''s own housekeeping is a cost
+  every consumer pays forever. These requirements are applied through construction
+  instead — the generator that builds a source satisfies them, and the commit that
+  changes that generator cites them.'
+rationale: Composing this graph from each governed source was rejected. Composition
+  is transitive, so the reference would resolve, but this graph would then ride into
+  every union the source enters, at a cost paid by consumers who never asked for
+  it.
 normative: false
 attrs:
   origin: hybrid
   ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:5d1c723f0a38b2e9a856b63ca897911b681bd24a1580d686c179953a9da63551
+  ratified_fingerprint: sha256:1ee2863dd537698c629f08babc8f0257f3bfd212b6c3341d20aab36bcd66c37d
+  ratified_content:
+    type: non_goal
+    text: 'A governed source does not declare this graph as a `[[sources]]` dependency
+      and does not name its UIDs in item links. Composition is transitive, so a source
+      that composed this graph would carry it into every consumer''s union: fetched
+      into each consumer''s cache, its items checked and rendered beside the standard
+      the consumer asked for, and its label taking a name in the consumer''s union,
+      which a consumer already using that name must alias apart. Sources exist to
+      be composed by other people, and loading them with the toolchain''s own housekeeping
+      is a cost every consumer pays forever. These requirements are applied through
+      construction instead — the generator that builds a source satisfies them, and
+      the commit that changes that generator cites them.'
+    normative: false
+    derived: false
+    attrs: {}
