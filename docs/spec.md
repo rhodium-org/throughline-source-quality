@@ -16,7 +16,7 @@ It carries
 
 > A throughline source exists so that a project can ground its own work in a published standard by composing it, rather than by retyping it. That is only worth doing if the rendering is faithful to the standard and legible to a reader who has not opened the original. A source that quietly distorts what it re-expresses is worse than no source at all, because it is trusted and composed at scale.
 
-**ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:f6b897537b50b8f0d098a8cead02ab90c5665069165471e8bae836f88ebad495
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 ## How this graph is applied
@@ -33,7 +33,9 @@ of its standard, with no dependency on this graph.
 
 *Rationale:* Composing this graph from each governed source was rejected. Composition is transitive, so the reference would resolve, but this graph would then ride into every union the source enters, at a cost paid by consumers who never asked for it.
 
-**origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:1ee2863dd537698c629f08babc8f0257f3bfd212b6c3341d20aab36bcd66c37d
+**origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 ## Requirements
@@ -59,7 +61,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:fb5338e67020939f657460fabc3afaca7149cc34b81ca24079de989a0d8ae2b6
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 <!-- tl:item REQ-0002 -->
@@ -69,7 +73,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:7daa6de17de213a2585a32df54c44cb901b12fbad43ad67bde6111e04b52fb8f
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 ### Fidelity to the published standard
@@ -81,7 +87,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:0e66315d9fa33cb7139fbcbccbf71f6d173e3d20964520195d6c017c7d9ac026
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 <!-- tl:item REQ-0006 -->
@@ -91,7 +99,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:2c3c66553915dbc36f386dd498ea6059bbcd2226a9dee48ad6a2627f61375f46
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 ### Identity and stability
@@ -103,7 +113,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:b65b99ffdaf30618950352127ce3acb91a978dad6eee32a59a1a2624490f4a96
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 <!-- tl:item REQ-0005 -->
@@ -113,7 +125,9 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:1a462cd5544a0936546b94a70031fb89041e157c82befa78a8509ad0d4b4eb6f
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
 
 <!-- tl:item REQ-0007 -->
@@ -123,5 +137,7 @@ of its standard, with no dependency on this graph.
 
 *Implements:* INT-0001
 
-**priority**: must · **origin**: hybrid · **ratified_by**: Henry Grech-Cini · **ratified_fingerprint**: sha256:b7966a787b43757bf68a89c241d14a135f497968b633810c61bb13891b6265ca
+**priority**: must · **origin**: hybrid
+
+*Ratified by:* Henry Grech-Cini
 <!-- tl:end -->
