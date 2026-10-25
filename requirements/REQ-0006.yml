@@ -13,5 +13,17 @@ links:
 attrs:
   priority: must
   origin: hybrid
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:2c3c66553915dbc36f386dd498ea6059bbcd2226a9dee48ad6a2627f61375f46
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:2c3c66553915dbc36f386dd498ea6059bbcd2226a9dee48ad6a2627f61375f46
+  content:
+    type: requirement
+    text: Standards bodies commonly retain the numbers of withdrawn clauses as tombstones
+      so that existing citations keep resolving. A tombstone is not a requirement,
+      and rendering one as a live item would invite a consumer to ground work in
+      a clause the publisher has already withdrawn.
+    normative: true
+    derived: false
+    attrs:
+      priority: must
+  revision: c5a9059c4988327f54989f3222c80182c2f443bf

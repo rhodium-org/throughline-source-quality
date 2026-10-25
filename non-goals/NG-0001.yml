@@ -19,9 +19,10 @@ rationale: Composing this graph from each governed source was rejected. Composit
 normative: false
 attrs:
   origin: hybrid
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:1ee2863dd537698c629f08babc8f0257f3bfd212b6c3341d20aab36bcd66c37d
-  ratified_content:
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:1ee2863dd537698c629f08babc8f0257f3bfd212b6c3341d20aab36bcd66c37d
+  content:
     type: non_goal
     text: 'A governed source does not declare this graph as a `[[sources]]` dependency
       and does not name its UIDs in item links. Composition is transitive, so a source
@@ -36,3 +37,4 @@ attrs:
     normative: false
     derived: false
     attrs: {}
+  revision: 34014e3328cef0e1d11f87366671ee174922d5a8

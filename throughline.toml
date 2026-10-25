@@ -1,6 +1,6 @@
 [project]
 name = "throughline source construction quality"
-format_version = 3
+format_version = 4
 
 # A throughline graph that holds the quality bar for *other* throughline sources —
 # the standards and guidance graphs (asvs, wcag, aisvs, nist-ai-rmf, masvs, slsa, …)

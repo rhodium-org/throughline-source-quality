@@ -13,5 +13,17 @@ links:
 attrs:
   priority: must
   origin: hybrid
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:b65b99ffdaf30618950352127ce3acb91a978dad6eee32a59a1a2624490f4a96
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:b65b99ffdaf30618950352127ce3acb91a978dad6eee32a59a1a2624490f4a96
+  content:
+    type: requirement
+    text: Consumers cite borrowed items by UID, and those citations live in repositories
+      this source cannot see. Re-running a generator against a newer edition of the
+      standard therefore allocates UIDs only to clauses that do not yet have one,
+      and never renumbers, reuses or reorders a UID already published.
+    normative: true
+    derived: false
+    attrs:
+      priority: must
+  revision: c5a9059c4988327f54989f3222c80182c2f443bf
