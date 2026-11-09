@@ -33,11 +33,14 @@ types = ["refines", "verifies", "satisfies", "implements", "relates",
 implements = { from = ["requirement"], to = ["intent"] }
 
 [status]
-values = ["proposed", "draft", "deferred", "approved", "ratified", "implemented",
-          "verified", "suspect", "rejected", "deleted"]
+# Retired by `tl migrate` (SR-0313): draft, approved stood between proposal and
+# signature. Every item is born proposed and counts only once a person signs it
+# (UR-0046).
+values = ["proposed", "deferred", "ratified", "implemented", "verified",
+          "suspect", "rejected", "deleted"]
 
 [status.roles]
-initial = "draft"
+initial = "proposed"
 proposed = "proposed"
 ratified = "ratified"
 invalidated = "rejected"
@@ -45,15 +48,14 @@ suspect = "suspect"
 tombstone = "deleted"
 
 [transitions]
-proposed    = ["draft", "approved", "ratified", "deferred", "suspect", "rejected", "deleted"]
-draft       = ["proposed", "approved", "deferred", "suspect", "rejected", "deleted"]
-deferred    = ["proposed", "draft", "approved", "suspect", "rejected", "deleted"]
-approved    = ["ratified", "implemented", "deferred", "suspect", "rejected", "deleted"]
+proposed = ["ratified", "deferred", "suspect", "rejected", "deleted"]
+deferred = ["proposed", "suspect", "rejected", "deleted"]
 ratified    = ["implemented", "suspect", "rejected", "deleted"]
 implemented = ["verified", "suspect", "rejected", "deleted"]
 verified    = ["implemented", "suspect", "deleted"]
-suspect     = ["approved", "ratified", "implemented", "verified", "rejected", "deleted"]
-rejected    = ["draft", "deleted"]
+suspect = ["proposed", "ratified", "implemented", "verified", "rejected",
+           "deleted"]
+rejected = ["proposed", "deleted"]
 
 # NOTE: `tl init` seeds a coverage rule requiring every requirement to be verified
 # by a `test` item. It is deliberately absent here. The verification of these
